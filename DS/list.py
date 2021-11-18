@@ -51,6 +51,14 @@ class Single_Linked_List:
         self.size -= 1
         return True
 
+    def to_array(self):
+        current = self.head
+        result = []
+        while current is not None:
+            result.append(current.data)
+            current = current.next
+        return result
+
     def printall(self):
         output = ""
         if self.size == 0:
